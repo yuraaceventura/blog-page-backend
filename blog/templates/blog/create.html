@@ -6,8 +6,10 @@
     <title>blog</title>
 </head>
 <body>
-    blog create page
-
+    <header>    
+        <a href = '{% url 'blog:create' %}'><button>Create blog</button></a>
+        <a href = '{% url 'blog:index' %}'><button>List all blogs</button></a>
+    </header>
     <br><br>
     <form action = '{% url 'blog:create' %}' method = "POST"> 
         {% csrf_token %}
